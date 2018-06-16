@@ -18,8 +18,9 @@ RUN cd absolute && chmod -R 777 * && ./autogen.sh && ./configure --disable-tests
 RUN git clone https://github.com/absolutecrypto/sentinel.git /root/sentinel
 RUN pip2 install -r /root/sentinel/requirements.txt
 RUN echo "absolute_conf=/root/config.conf" >> /root/sentinel/sentinel.conf
-RUN echo "* * * * * root cd /root/sentinel && /usr/bin/python2.7 bin/sentinel.py >/dev/null 2>&1" >> /etc/crontab
+RUN echo "* * * * * root cd /root/sentinel && /usr/bin/python bin/sentinel.py >/dev/null 2>&1" >> /etc/crontab
 RUN crontab /etc/crontab
+
 
 
 ADD run.sh /usr/local/bin
