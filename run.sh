@@ -22,4 +22,6 @@ masternode=1\n\
 externalip=$IP:$PORT" >> /root/config.conf
 fi
 
+cron
+
 /usr/local/bin/absoluted -conf=/root/config.conf -masternodeprivkey=$1
