@@ -2,7 +2,7 @@
 FROM ubuntu:18.04
 
 
-RUN apt-get update -y && apt-get upgrade -y && apt-get install python2.7 python-pip git-core software-properties-common -y && add-apt-repository -y ppa:bitcoin/bitcoin
+RUN apt-get update -y && apt-get upgrade -y && apt-get install cron python2.7 python-pip git-core software-properties-common -y && add-apt-repository -y ppa:bitcoin/bitcoin
 RUN apt-get install curl build-essential libtool automake autoconf autotools-dev autoconf pkg-config libssl-dev libgmp3-dev libevent-dev bsdmainutils libboost-all-dev libzmq3-dev libminiupnpc-dev libdb4.8-dev libdb4.8++-dev -y
 RUN apt-get install bsdmainutils -y
 
